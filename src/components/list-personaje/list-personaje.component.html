@@ -1,0 +1,21 @@
+<style>
+    .poderoso {
+        color: red;
+    }
+
+    .debil {
+        color: blue;
+    }
+</style>
+
+
+<ul>
+    @for (personaje of personajes(); track personaje.id; let ind = $index) { @if(personaje.power >
+    1000){
+    <li [class.poderoso]="personaje.power > 10000" [class.debil]="personaje.power < 10000">
+        {{ ind + 1 }} - {{ personaje.name }} - {{ personaje.power }}
+    </li>
+    }@else{
+    <li><span>El personaje tiene poder menor a 1000</span></li>
+    } }
+</ul>

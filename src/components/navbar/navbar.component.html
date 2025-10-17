@@ -1,0 +1,21 @@
+<style>
+    nav {
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        background-color: black;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    nav a.active {
+        color: red
+    }
+</style>
+
+
+<nav>
+    <a [routerLink]="['/']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">Home</a>
+    <a [routerLink]="['./pagina1']" [routerLinkActive]="['active']">Pagina 1</a>
+    <a [routerLink]="['./pagina2']" [routerLinkActive]="['active']">Pagina 2</a>
+</nav>

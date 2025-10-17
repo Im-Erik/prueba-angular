@@ -1,0 +1,9 @@
+<section class="row">
+    <div class="col-12 col-sm-6">
+        <app-add-personaje (addPersonajeOut)="personajeService.agregarAlArreglo($event)" />
+    </div>
+
+    <div class="col-12 col-sm-6 mt-4">
+        <app-list-personaje [personajes]="personajeService.personajes()"></app-list-personaje>
+    </div>
+</section>
